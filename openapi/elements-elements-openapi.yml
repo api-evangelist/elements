@@ -1,0 +1,309 @@
+openapi: 3.1.0
+info:
+  title: Stoplight Elements API
+  description: >-
+    Stoplight Elements is an open-source API documentation component library
+    that renders OpenAPI 2.0, 3.0, and 3.1 specifications as beautiful,
+    interactive developer documentation. This OpenAPI specification represents
+    the conceptual API surface of the Stoplight Elements component library,
+    including its React component props, Web Component attributes, configuration
+    options, and supported layouts. Elements is a client-side component library
+    and does not expose a traditional REST API. It is configured via React props
+    on the API React component or HTML attributes on the elements-api custom
+    element.
+  version: '8.0.0'
+  contact:
+    name: Stoplight Support
+    url: https://stoplight.io/contact-us
+  license:
+    name: Apache 2.0
+    url: https://github.com/stoplightio/elements/blob/main/LICENSE
+externalDocs:
+  description: Stoplight Elements Documentation
+  url: https://docs.stoplight.io/docs/elements
+servers:
+  - url: https://stoplight.io
+    description: Stoplight Documentation and Marketing Site
+tags:
+  - name: Configuration
+    description: >-
+      Configuration props and attributes for the Stoplight Elements API
+      component controlling layout, visibility, Try It behavior, routing, and
+      OpenAPI specification loading.
+  - name: Layout
+    description: >-
+      Layout options and display modes supported by the Elements API component,
+      including sidebar, stacked, and responsive layouts.
+  - name: TryIt
+    description: >-
+      Try It console configuration options controlling credential policy, CORS
+      proxy, and visibility of the interactive request testing panel.
+  - name: Integration
+    description: >-
+      Integration and embedding guides for using Elements in React, Angular,
+      and plain HTML via Web Components or CDN.
+paths:
+  /open-source/elements:
+    get:
+      operationId: getElementsOverview
+      summary: Get Stoplight Elements Overview
+      description: >-
+        Returns the Stoplight Elements open-source landing page describing the
+        component library, its features, supported standards, and links to
+        getting started guides and documentation.
+      tags:
+        - Integration
+      responses:
+        '200':
+          description: Successful response returning the Elements overview page.
+          content:
+            text/html:
+              schema:
+                type: string
+  /docs/elements:
+    get:
+      operationId: getElementsDocumentation
+      summary: Get Elements Documentation
+      description: >-
+        Returns the main Elements documentation landing page with links to
+        getting started guides for React, Web Components, and Angular, as well
+        as the full configuration options reference.
+      tags:
+        - Integration
+      responses:
+        '200':
+          description: Successful response returning the Elements documentation index.
+          content:
+            text/html:
+              schema:
+                type: string
+  /docs/elements/b074dc07b3bae-getting-started-with-elements-in-react:
+    get:
+      operationId: getReactGettingStarted
+      summary: Get React Integration Guide
+      description: >-
+        Returns the getting started guide for integrating Stoplight Elements as
+        React components. Covers installation of @stoplight/elements, importing
+        the API component, providing an apiDescriptionUrl or
+        apiDescriptionDocument prop, choosing a layout, and configuring the
+        router prop.
+      tags:
+        - Integration
+      responses:
+        '200':
+          description: Successful response returning the React integration guide.
+          content:
+            text/html:
+              schema:
+                type: string
+  /docs/elements/19a7f9f0cbf23-getting-started-with-web-component:
+    get:
+      operationId: getWebComponentGettingStarted
+      summary: Get Web Component Integration Guide
+      description: >-
+        Returns the getting started guide for embedding Stoplight Elements as a
+        Web Component (Custom Element) via CDN or npm. Covers including the
+        web-components bundle, using the elements-api custom element tag in
+        HTML, and setting attributes for apiDescriptionUrl, router, and layout.
+      tags:
+        - Integration
+      responses:
+        '200':
+          description: Successful response returning the Web Component integration guide.
+          content:
+            text/html:
+              schema:
+                type: string
+  /docs/elements/507fb7fab9b7d-getting-started-with-elements-in-angular:
+    get:
+      operationId: getAngularGettingStarted
+      summary: Get Angular Integration Guide
+      description: >-
+        Returns the getting started guide for integrating Stoplight Elements
+        into an Angular application, covering the CUSTOM_ELEMENTS_SCHEMA import,
+        component registration, and attribute binding.
+      tags:
+        - Integration
+      responses:
+        '200':
+          description: Successful response returning the Angular integration guide.
+          content:
+            text/html:
+              schema:
+                type: string
+  /docs/elements/ZG9jOjMyNjU5MTM-elements-configuration-options:
+    get:
+      operationId: getConfigurationOptions
+      summary: Get Configuration Options Reference
+      description: >-
+        Returns the complete reference page for all Stoplight Elements
+        configuration props and Web Component attributes, including
+        apiDescriptionUrl, apiDescriptionDocument, layout, router, basePath,
+        hideTryIt, hideTryItPanel, hideSamples, hideSchemas, hideInternal,
+        hideExport, hideServerInfo, hideSecurityInfo, tryItCredentialsPolicy,
+        tryItCorsProxy, maxRefDepth, logo, and outerRouter.
+      tags:
+        - Configuration
+      responses:
+        '200':
+          description: Successful response returning the configuration options reference.
+          content:
+            text/html:
+              schema:
+                type: string
+components:
+  schemas:
+    APIProps:
+      type: object
+      description: >-
+        Configuration properties for the Stoplight Elements API React component
+        and elements-api Web Component. Either apiDescriptionUrl or
+        apiDescriptionDocument must be provided.
+      properties:
+        apiDescriptionUrl:
+          type: string
+          format: uri
+          description: >-
+            URL pointing to the OpenAPI 2.0, 3.0, or 3.1 specification document
+            to render. Mutually exclusive with apiDescriptionDocument.
+          example: https://api.example.com/openapi.json
+        apiDescriptionDocument:
+          type:
+            - string
+            - object
+          description: >-
+            The OpenAPI 2.0, 3.0, or 3.1 document provided directly as a JSON
+            string, YAML string, or parsed JavaScript object. Mutually exclusive
+            with apiDescriptionUrl.
+        layout:
+          type: string
+          enum:
+            - sidebar
+            - stacked
+            - responsive
+          default: sidebar
+          description: >-
+            Controls the visual layout of the rendered documentation. sidebar
+            places navigation on the left side resembling Stoplight Platform.
+            stacked renders a single-column layout resembling Swagger UI with no
+            sidebar. responsive automatically switches between sidebar and
+            stacked based on viewport width.
+        router:
+          type: string
+          enum:
+            - hash
+            - memory
+            - history
+            - static
+          description: >-
+            Controls the routing strategy used for deep-linking to individual
+            operations and schemas. hash uses URL hash fragments. history uses
+            the HTML5 History API. memory keeps navigation state in memory
+            without modifying the URL. static disables routing entirely.
+        basePath:
+          type: string
+          description: >-
+            The base path prefix for the router when using history or hash
+            routing. Useful when Elements is embedded at a non-root URL path.
+          example: /api-docs
+        staticRouterPath:
+          type: string
+          description: >-
+            A static path override used with the static router option to render
+            a specific operation or schema without URL-based navigation.
+        logo:
+          type: string
+          format: uri
+          description: >-
+            URL of an image to display as the logo in the sidebar above the
+            navigation. Only applies when layout is sidebar or responsive.
+          example: https://example.com/logo.png
+        hideTryIt:
+          type: boolean
+          default: false
+          description: >-
+            When true, hides the Try It console tab from all operation pages.
+            Users cannot send test requests from the documentation.
+        hideTryItPanel:
+          type: boolean
+          default: false
+          description: >-
+            When true, hides the right panel containing the Try It console and
+            request samples, showing only the operation documentation without
+            the request/response panel.
+        hideSamples:
+          type: boolean
+          default: false
+          description: >-
+            When true, hides the automatically generated request code samples
+            panel from operation documentation pages.
+        hideSchemas:
+          type: boolean
+          default: false
+          description: >-
+            When true, hides all schema definitions from the sidebar Table of
+            Contents navigation. Schema objects from the components/schemas
+            section are not linked in the sidebar.
+        hideInternal:
+          type: boolean
+          default: false
+          description: >-
+            When true, hides all operations and models marked as internal using
+            the x-internal vendor extension. Internal operations are not
+            displayed in the documentation or sidebar navigation.
+        hideExport:
+          type: boolean
+          default: false
+          description: >-
+            When true, hides the Export button from the API overview page.
+            Users cannot download the OpenAPI specification from the rendered
+            documentation page.
+        hideServerInfo:
+          type: boolean
+          default: false
+          description: >-
+            When true, hides the Server information section from the API
+            overview and operation pages.
+        hideSecurityInfo:
+          type: boolean
+          default: false
+          description: >-
+            When true, hides the Security information section from the API
+            overview and operation pages.
+        tryItCredentialsPolicy:
+          type: string
+          enum:
+            - omit
+            - include
+            - same-origin
+          default: omit
+          description: >-
+            Controls the credentials fetch policy for requests sent from the
+            Try It console. omit sends no cookies or authorization headers.
+            include always sends credentials. same-origin sends credentials only
+            for same-origin requests. Maps to the credentials option of the
+            Fetch API.
+        tryItCorsProxy:
+          type: string
+          format: uri
+          description: >-
+            URL of a CORS proxy server that will be prepended to the request URL
+            when sending Try It requests. Use this when the target API does not
+            allow cross-origin requests from the browser.
+          example: https://cors-anywhere.example.com/
+        maxRefDepth:
+          type: integer
+          minimum: 1
+          description: >-
+            Maximum depth for resolving and rendering inline $ref references in
+            schemas. Prevents infinite loops in deeply recursive or circular
+            schemas. When not set, defaults to the Elements internal maximum.
+          example: 5
+        outerRouter:
+          type: boolean
+          default: false
+          description: >-
+            When true, indicates that Elements is nested inside an existing
+            router (such as React Router) in the parent application. Elements
+            will use the outer router context rather than creating its own
+            internal router instance.

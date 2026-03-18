@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apievangelist.com/schemas/elements/elements-configuration.json",
+  "title": "Stoplight Elements Configuration",
+  "description": "Configuration properties for the Stoplight Elements API React component and elements-api Web Component. These options control the OpenAPI specification source, display layout, navigation routing, Try It console behavior, and visibility of individual UI sections.",
+  "type": "object",
+  "properties": {
+    "apiDescriptionUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL pointing to the OpenAPI 2.0, 3.0, or 3.1 specification document to render. Mutually exclusive with apiDescriptionDocument.",
+      "examples": ["https://api.example.com/openapi.json"]
+    },
+    "apiDescriptionDocument": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "The OpenAPI document as a JSON or YAML string."
+        },
+        {
+          "type": "object",
+          "description": "The OpenAPI document as a pre-parsed JavaScript object."
+        }
+      ],
+      "description": "The OpenAPI 2.0, 3.0, or 3.1 document provided directly as a JSON string, YAML string, or parsed JavaScript object. Mutually exclusive with apiDescriptionUrl."
+    },
+    "layout": {
+      "type": "string",
+      "enum": ["sidebar", "stacked", "responsive"],
+      "default": "sidebar",
+      "description": "Controls the visual layout of the rendered documentation. sidebar places navigation on the left side resembling Stoplight Platform. stacked renders a single-column layout resembling Swagger UI with no sidebar. responsive automatically switches between sidebar and stacked based on viewport width."
+    },
+    "router": {
+      "type": "string",
+      "enum": ["hash", "memory", "history", "static"],
+      "description": "Controls the routing strategy used for deep-linking to individual operations and schemas. hash uses URL hash fragments. history uses the HTML5 History API. memory keeps navigation state in memory without modifying the URL. static disables routing entirely."
+    },
+    "basePath": {
+      "type": "string",
+      "description": "The base path prefix for the router when using history or hash routing. Useful when Elements is embedded at a non-root URL path.",
+      "examples": ["/api-docs"]
+    },
+    "staticRouterPath": {
+      "type": "string",
+      "description": "A static path override used with the static router option to render a specific operation or schema without URL-based navigation."
+    },
+    "logo": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of an image to display as the logo in the sidebar above the navigation. Only applies when layout is sidebar or responsive.",
+      "examples": ["https://example.com/logo.png"]
+    },
+    "hideTryIt": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, hides the Try It console tab from all operation pages. Users cannot send test requests from the documentation."
+    },
+    "hideTryItPanel": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, hides the right panel containing the Try It console and request samples, showing only the operation documentation without the request/response panel."
+    },
+    "hideSamples": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, hides the automatically generated request code samples panel from operation documentation pages."
+    },
+    "hideSchemas": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, hides all schema definitions from the sidebar Table of Contents navigation. Schema objects from the components/schemas section are not linked in the sidebar."
+    },
+    "hideInternal": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, hides all operations and models marked as internal using the x-internal vendor extension. Internal operations are not displayed in the documentation or sidebar navigation."
+    },
+    "hideExport": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, hides the Export button from the API overview page. Users cannot download the OpenAPI specification from the rendered documentation page."
+    },
+    "hideServerInfo": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, hides the Server information section from the API overview and operation pages."
+    },
+    "hideSecurityInfo": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, hides the Security information section from the API overview and operation pages."
+    },
+    "tryItCredentialsPolicy": {
+      "type": "string",
+      "enum": ["omit", "include", "same-origin"],
+      "default": "omit",
+      "description": "Controls the credentials fetch policy for requests sent from the Try It console. omit sends no cookies or authorization headers. include always sends credentials. same-origin sends credentials only for same-origin requests. Maps to the credentials option of the Fetch API."
+    },
+    "tryItCorsProxy": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of a CORS proxy server that will be prepended to the request URL when sending Try It requests. Use this when the target API does not allow cross-origin requests from the browser.",
+      "examples": ["https://cors-anywhere.example.com/"]
+    },
+    "maxRefDepth": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Maximum depth for resolving and rendering inline $ref references in schemas. Prevents infinite loops in deeply recursive or circular schemas. When not set, defaults to the Elements internal maximum.",
+      "examples": [5]
+    },
+    "outerRouter": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, indicates that Elements is nested inside an existing router (such as React Router) in the parent application. Elements will use the outer router context rather than creating its own internal router instance."
+    },
+    "renderExtensionAddon": {
+      "type": "string",
+      "description": "A reference to a custom renderer function for vendor extensions (x- fields) in the OpenAPI document. Allows applications to provide custom UI renderers for specification extensions. Only applicable in React usage."
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "LayoutOption": {
+      "type": "string",
+      "enum": ["sidebar", "stacked", "responsive"],
+      "description": "Available display layout modes for the Elements component. sidebar renders a three-panel layout with navigation sidebar. stacked renders all content in a single scrollable column. responsive switches between sidebar and stacked based on viewport width."
+    },
+    "RouterOption": {
+      "type": "string",
+      "enum": ["hash", "memory", "history", "static"],
+      "description": "Available routing strategies for deep-linking within the Elements component. hash uses URL hash fragments. history uses the HTML5 History API push state. memory keeps state in memory without modifying the browser URL. static disables client-side routing entirely."
+    },
+    "CredentialsPolicy": {
+      "type": "string",
+      "enum": ["omit", "include", "same-origin"],
+      "description": "Fetch API credentials policy for the Try It console. Controls whether cookies and HTTP authentication credentials are sent with outgoing requests."
+    }
+  }
+}

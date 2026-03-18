@@ -1,0 +1,227 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "elements": "https://stoplight.io/elements/vocab#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "APIDocumentationComponent": {
+      "@id": "elements:APIDocumentationComponent",
+      "@context": {
+        "apiDescriptionUrl": {
+          "@id": "elements:apiDescriptionUrl",
+          "@type": "@id"
+        },
+        "apiDescriptionDocument": {
+          "@id": "elements:apiDescriptionDocument"
+        },
+        "layout": {
+          "@id": "elements:layout"
+        },
+        "router": {
+          "@id": "elements:router"
+        },
+        "basePath": {
+          "@id": "elements:basePath"
+        },
+        "staticRouterPath": {
+          "@id": "elements:staticRouterPath"
+        },
+        "logo": {
+          "@id": "schema:logo",
+          "@type": "@id"
+        },
+        "hideTryIt": {
+          "@id": "elements:hideTryIt"
+        },
+        "hideTryItPanel": {
+          "@id": "elements:hideTryItPanel"
+        },
+        "hideSamples": {
+          "@id": "elements:hideSamples"
+        },
+        "hideSchemas": {
+          "@id": "elements:hideSchemas"
+        },
+        "hideInternal": {
+          "@id": "elements:hideInternal"
+        },
+        "hideExport": {
+          "@id": "elements:hideExport"
+        },
+        "hideServerInfo": {
+          "@id": "elements:hideServerInfo"
+        },
+        "hideSecurityInfo": {
+          "@id": "elements:hideSecurityInfo"
+        },
+        "tryItCredentialsPolicy": {
+          "@id": "elements:tryItCredentialsPolicy"
+        },
+        "tryItCorsProxy": {
+          "@id": "elements:tryItCorsProxy",
+          "@type": "@id"
+        },
+        "maxRefDepth": {
+          "@id": "elements:maxRefDepth"
+        },
+        "outerRouter": {
+          "@id": "elements:outerRouter"
+        }
+      }
+    },
+
+    "OpenAPISpecification": {
+      "@id": "elements:OpenAPISpecification",
+      "@context": {
+        "url": {
+          "@id": "schema:url",
+          "@type": "@id"
+        },
+        "title": {
+          "@id": "dcterms:title"
+        },
+        "description": {
+          "@id": "dcterms:description"
+        },
+        "version": {
+          "@id": "schema:version"
+        },
+        "specVersion": {
+          "@id": "elements:specVersion"
+        },
+        "servers": {
+          "@id": "elements:servers",
+          "@container": "@set"
+        },
+        "tags": {
+          "@id": "elements:tags",
+          "@container": "@set"
+        },
+        "paths": {
+          "@id": "elements:paths",
+          "@container": "@set"
+        },
+        "components": {
+          "@id": "elements:components"
+        }
+      }
+    },
+
+    "OperationNode": {
+      "@id": "elements:OperationNode",
+      "@context": {
+        "operationId": {
+          "@id": "elements:operationId"
+        },
+        "summary": {
+          "@id": "dcterms:title"
+        },
+        "description": {
+          "@id": "dcterms:description"
+        },
+        "method": {
+          "@id": "elements:httpMethod"
+        },
+        "path": {
+          "@id": "elements:httpPath"
+        },
+        "tags": {
+          "@id": "elements:tags",
+          "@container": "@set"
+        },
+        "internal": {
+          "@id": "elements:internal"
+        },
+        "deprecated": {
+          "@id": "schema:supersededBy"
+        }
+      }
+    },
+
+    "SchemaNode": {
+      "@id": "elements:SchemaNode",
+      "@context": {
+        "name": {
+          "@id": "schema:name"
+        },
+        "title": {
+          "@id": "dcterms:title"
+        },
+        "description": {
+          "@id": "dcterms:description"
+        },
+        "type": {
+          "@id": "elements:schemaType"
+        },
+        "properties": {
+          "@id": "elements:properties",
+          "@container": "@set"
+        },
+        "required": {
+          "@id": "elements:requiredProperties",
+          "@container": "@set"
+        }
+      }
+    },
+
+    "ServerNode": {
+      "@id": "elements:ServerNode",
+      "@context": {
+        "url": {
+          "@id": "schema:url",
+          "@type": "@id"
+        },
+        "description": {
+          "@id": "dcterms:description"
+        },
+        "variables": {
+          "@id": "elements:serverVariables"
+        }
+      }
+    },
+
+    "TryItRequest": {
+      "@id": "elements:TryItRequest",
+      "@context": {
+        "url": {
+          "@id": "schema:url",
+          "@type": "@id"
+        },
+        "method": {
+          "@id": "elements:httpMethod"
+        },
+        "headers": {
+          "@id": "elements:headers",
+          "@container": "@set"
+        },
+        "body": {
+          "@id": "elements:requestBody"
+        },
+        "credentialsPolicy": {
+          "@id": "elements:tryItCredentialsPolicy"
+        },
+        "corsProxy": {
+          "@id": "elements:tryItCorsProxy",
+          "@type": "@id"
+        }
+      }
+    },
+
+    "LayoutConfiguration": {
+      "@id": "elements:LayoutConfiguration",
+      "@context": {
+        "layout": {
+          "@id": "elements:layout"
+        },
+        "router": {
+          "@id": "elements:router"
+        },
+        "basePath": {
+          "@id": "elements:basePath"
+        }
+      }
+    }
+  }
+}
