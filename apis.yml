@@ -23,15 +23,11 @@ apis:
       - url: json-schema/elements-configuration-schema.json
         type: JSONSchema
     description: >-
-      Stoplight Elements is an open-source API documentation component library
-      that renders OpenAPI 2.0, 3.0, and 3.1 specifications as beautiful,
-      interactive developer documentation. It is available as React components
-      and Web Components, making it embeddable in any web application or static
-      HTML page. Elements provides a sidebar layout, a stacked layout, and a
-      responsive layout. It includes a built-in Try It console for testing API
-      requests directly from the documentation, auto-generated code samples,
-      schema visualization, and support for internal operation filtering. It is
-      published on npm as @stoplight/elements and can also be loaded from a CDN.
+      Stoplight Elements is an open-source API documentation component library that
+      renders OpenAPI 2.0, 3.0, and 3.1 specifications as beautiful, interactive developer
+      documentation. It is available as React components and Web Components, making
+      it embeddable in any web application or static HTML page. Elements provides
+      a sidebar layout, a stacked layout, and a responsive layout.
 name: Stoplight Elements
 tags:
   - Documentation
@@ -80,19 +76,23 @@ common:
     type: CDN
   - name: Stoplight Elements Getting Started with React
     description: 'null'
-    url: https://docs.stoplight.io/docs/elements/b074dc07b3bae-getting-started-with-elements-in-react
+    url: 
+      https://docs.stoplight.io/docs/elements/b074dc07b3bae-getting-started-with-elements-in-react
     type: GettingStarted
   - name: Stoplight Elements Getting Started with Web Components
     description: 'null'
-    url: https://docs.stoplight.io/docs/elements/19a7f9f0cbf23-getting-started-with-web-component
+    url: 
+      https://docs.stoplight.io/docs/elements/19a7f9f0cbf23-getting-started-with-web-component
     type: GettingStarted
   - name: Stoplight Elements Getting Started with Angular
     description: 'null'
-    url: https://docs.stoplight.io/docs/elements/507fb7fab9b7d-getting-started-with-elements-in-angular
+    url: 
+      https://docs.stoplight.io/docs/elements/507fb7fab9b7d-getting-started-with-elements-in-angular
     type: GettingStarted
   - name: Stoplight Elements Configuration Options
     description: 'null'
-    url: https://docs.stoplight.io/docs/elements/ZG9jOjMyNjU5MTM-elements-configuration-options
+    url: 
+      https://docs.stoplight.io/docs/elements/ZG9jOjMyNjU5MTM-elements-configuration-options
     type: Reference
   - name: Stoplight Open Source Website
     description: 'null'
