@@ -5,11 +5,11 @@ apis:
   - aid: elements:elements
     name: Stoplight Elements
     tags:
+      - API Documentation
       - Documentation
       - OpenAPI
       - React
       - Web Components
-      - API Documentation
     humanURL: https://stoplight.io/open-source/elements
     properties:
       - url: https://stoplight.io/open-source/elements
@@ -30,13 +30,13 @@ apis:
       a sidebar layout, a stacked layout, and a responsive layout.
 name: Stoplight Elements
 tags:
+  - API Documentation
+  - Developer Tools
   - Documentation
+  - Interactive Docs
   - OpenAPI
   - React
   - Web Components
-  - API Documentation
-  - Developer Tools
-  - Interactive Docs
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
@@ -76,23 +76,19 @@ common:
     type: CDN
   - name: Stoplight Elements Getting Started with React
     description: 'null'
-    url: 
-      https://docs.stoplight.io/docs/elements/b074dc07b3bae-getting-started-with-elements-in-react
+    url: https://docs.stoplight.io/docs/elements/b074dc07b3bae-getting-started-with-elements-in-react
     type: GettingStarted
   - name: Stoplight Elements Getting Started with Web Components
     description: 'null'
-    url: 
-      https://docs.stoplight.io/docs/elements/19a7f9f0cbf23-getting-started-with-web-component
+    url: https://docs.stoplight.io/docs/elements/19a7f9f0cbf23-getting-started-with-web-component
     type: GettingStarted
   - name: Stoplight Elements Getting Started with Angular
     description: 'null'
-    url: 
-      https://docs.stoplight.io/docs/elements/507fb7fab9b7d-getting-started-with-elements-in-angular
+    url: https://docs.stoplight.io/docs/elements/507fb7fab9b7d-getting-started-with-elements-in-angular
     type: GettingStarted
   - name: Stoplight Elements Configuration Options
     description: 'null'
-    url: 
-      https://docs.stoplight.io/docs/elements/ZG9jOjMyNjU5MTM-elements-configuration-options
+    url: https://docs.stoplight.io/docs/elements/ZG9jOjMyNjU5MTM-elements-configuration-options
     type: Reference
   - name: Stoplight Open Source Website
     description: 'null'

@@ -30,14 +30,6 @@ tags:
       Configuration props and attributes for the Stoplight Elements API
       component controlling layout, visibility, Try It behavior, routing, and
       OpenAPI specification loading.
-  - name: Layout
-    description: >-
-      Layout options and display modes supported by the Elements API component,
-      including sidebar, stacked, and responsive layouts.
-  - name: TryIt
-    description: >-
-      Try It console configuration options controlling credential policy, CORS
-      proxy, and visibility of the interactive request testing panel.
   - name: Integration
     description: >-
       Integration and embedding guides for using Elements in React, Angular,
