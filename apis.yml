@@ -53,6 +53,12 @@ description: >-
   documentation from any OpenAPI 2.0, 3.0, or 3.1 document, with support for a
   Try It console, code sample generation, sidebar and stacked layouts, and
   internal operation filtering.
+integrations:
+  - name: Azure
+  - name: GitHub
+  - name: GitLab
+  - name: Bitbucket
+  - name: Single sign-on
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
@@ -110,3 +116,5 @@ common:
     description: 'null'
     url: json-ld/elements-context.jsonld
     type: JSON-LD
+  - type: Integrations
+    url: https://stoplight.io/integrations
