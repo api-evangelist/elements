@@ -103,7 +103,7 @@ common:
   - name: Stoplight Elements Changelog
     description: 'null'
     url: https://github.com/stoplightio/elements/blob/main/CHANGELOG.md
-    type: Changelog
+    type: ChangeLog
   - name: Stoplight Elements License (Apache 2.0)
     description: 'null'
     url: https://github.com/stoplightio/elements/blob/main/LICENSE
@@ -115,6 +115,6 @@ common:
   - name: Stoplight Elements JSON-LD Context
     description: 'null'
     url: json-ld/elements-context.jsonld
-    type: JSON-LD
+    type: JSONLD
   - type: Integrations
     url: https://stoplight.io/integrations
