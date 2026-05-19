@@ -1,0 +1,195 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Stoplight Elements API — Integration
+  description: 'Stoplight Elements API — Integration. 5 operations. Lead operation: Stoplight Elements Get Elements Documentation.
+    Self-contained Naftiko capability covering one Elements business surface.'
+  tags:
+  - Elements
+  - Integration
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    ELEMENTS_API_KEY: ELEMENTS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: elements-integration
+    baseUri: https://stoplight.io
+    description: Stoplight Elements API — Integration business capability. Self-contained, no shared references.
+    resources:
+    - name: docs-elements
+      path: /docs/elements
+      operations:
+      - name: getelementsdocumentation
+        method: GET
+        description: Stoplight Elements Get Elements Documentation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: docs-elements-19a7f9f0cbf23-getting-started-with-web-component
+      path: /docs/elements/19a7f9f0cbf23-getting-started-with-web-component
+      operations:
+      - name: getwebcomponentgettingstarted
+        method: GET
+        description: Stoplight Elements Get Web Component Integration Guide
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: docs-elements-507fb7fab9b7d-getting-started-with-elements-in-angular
+      path: /docs/elements/507fb7fab9b7d-getting-started-with-elements-in-angular
+      operations:
+      - name: getangulargettingstarted
+        method: GET
+        description: Stoplight Elements Get Angular Integration Guide
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: docs-elements-b074dc07b3bae-getting-started-with-elements-in-react
+      path: /docs/elements/b074dc07b3bae-getting-started-with-elements-in-react
+      operations:
+      - name: getreactgettingstarted
+        method: GET
+        description: Stoplight Elements Get React Integration Guide
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: open-source-elements
+      path: /open-source/elements
+      operations:
+      - name: getelementsoverview
+        method: GET
+        description: Get Stoplight Elements Overview
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: elements-integration-rest
+    port: 8080
+    description: REST adapter for Stoplight Elements API — Integration. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/docs/elements
+      name: docs-elements
+      description: REST surface for docs-elements.
+      operations:
+      - method: GET
+        name: getelementsdocumentation
+        description: Stoplight Elements Get Elements Documentation
+        call: elements-integration.getelementsdocumentation
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/docs/elements/19a7f9f0cbf23-getting-started-with-web-component
+      name: docs-elements-19a7f9f0cbf23-getting-started-with-web-component
+      description: REST surface for docs-elements-19a7f9f0cbf23-getting-started-with-web-component.
+      operations:
+      - method: GET
+        name: getwebcomponentgettingstarted
+        description: Stoplight Elements Get Web Component Integration Guide
+        call: elements-integration.getwebcomponentgettingstarted
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/docs/elements/507fb7fab9b7d-getting-started-with-elements-in-angular
+      name: docs-elements-507fb7fab9b7d-getting-started-with-elements-in-angular
+      description: REST surface for docs-elements-507fb7fab9b7d-getting-started-with-elements-in-angular.
+      operations:
+      - method: GET
+        name: getangulargettingstarted
+        description: Stoplight Elements Get Angular Integration Guide
+        call: elements-integration.getangulargettingstarted
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/docs/elements/b074dc07b3bae-getting-started-with-elements-in-react
+      name: docs-elements-b074dc07b3bae-getting-started-with-elements-in-react
+      description: REST surface for docs-elements-b074dc07b3bae-getting-started-with-elements-in-react.
+      operations:
+      - method: GET
+        name: getreactgettingstarted
+        description: Stoplight Elements Get React Integration Guide
+        call: elements-integration.getreactgettingstarted
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/open-source/elements
+      name: open-source-elements
+      description: REST surface for open-source-elements.
+      operations:
+      - method: GET
+        name: getelementsoverview
+        description: Get Stoplight Elements Overview
+        call: elements-integration.getelementsoverview
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: elements-integration-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Stoplight Elements API — Integration. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: stoplight-elements-get-elements-documentation
+      description: Stoplight Elements Get Elements Documentation
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: elements-integration.getelementsdocumentation
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: stoplight-elements-get-web-component
+      description: Stoplight Elements Get Web Component Integration Guide
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: elements-integration.getwebcomponentgettingstarted
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: stoplight-elements-get-angular-integration
+      description: Stoplight Elements Get Angular Integration Guide
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: elements-integration.getangulargettingstarted
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: stoplight-elements-get-react-integration
+      description: Stoplight Elements Get React Integration Guide
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: elements-integration.getreactgettingstarted
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-stoplight-elements-overview
+      description: Get Stoplight Elements Overview
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: elements-integration.getelementsoverview
+      outputParameters:
+      - type: object
+        mapping: $.
