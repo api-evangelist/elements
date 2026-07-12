@@ -60,6 +60,8 @@ maintainers:
     email: kin@apievangelist.com
 specificationVersion: '0.19'
 common:
+  - type: DomainSecurity
+    url: security/elements-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/stoplight
   - name: Stoplight Elements Documentation
