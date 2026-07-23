@@ -1,0 +1,35 @@
+openapi: 3.1.0
+info:
+  title: Stoplight Elements Configuration API
+  description: Stoplight Elements is an open-source API documentation component library that renders OpenAPI 2.0, 3.0, and 3.1 specifications as beautiful, interactive developer documentation. This OpenAPI specification represents the conceptual API surface of the Stoplight Elements component library, including its React component props, Web Component attributes, configuration options, and supported layouts. Elements is a client-side component library and does not expose a traditional REST API. It is configured via React props on the API React component or HTML attributes on the elements-api custom element.
+  version: 8.0.0
+  contact:
+    name: Stoplight Support
+    url: https://stoplight.io/contact-us
+  license:
+    name: Apache 2.0
+    url: https://github.com/stoplightio/elements/blob/main/LICENSE
+servers:
+- url: https://stoplight.io
+  description: Stoplight Documentation and Marketing Site
+tags:
+- name: Configuration
+  description: Configuration props and attributes for the Stoplight Elements API component controlling layout, visibility, Try It behavior, routing, and OpenAPI specification loading.
+paths:
+  /docs/elements/ZG9jOjMyNjU5MTM-elements-configuration-options:
+    get:
+      operationId: getConfigurationOptions
+      summary: Stoplight Elements Get Configuration Options Reference
+      description: Returns the complete reference page for all Stoplight Elements configuration props and Web Component attributes, including apiDescriptionUrl, apiDescriptionDocument, layout, router, basePath, hideTryIt, hideTryItPanel, hideSamples, hideSchemas, hideInternal, hideExport, hideServerInfo, hideSecurityInfo, tryItCredentialsPolicy, tryItCorsProxy, maxRefDepth, logo, and outerRouter.
+      tags:
+      - Configuration
+      responses:
+        '200':
+          description: Successful response returning the configuration options reference.
+          content:
+            text/html:
+              schema:
+                type: string
+externalDocs:
+  description: Stoplight Elements Documentation
+  url: https://docs.stoplight.io/docs/elements

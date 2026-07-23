@@ -1,0 +1,91 @@
+openapi: 3.1.0
+info:
+  title: Stoplight Elements Configuration Integration API
+  description: Stoplight Elements is an open-source API documentation component library that renders OpenAPI 2.0, 3.0, and 3.1 specifications as beautiful, interactive developer documentation. This OpenAPI specification represents the conceptual API surface of the Stoplight Elements component library, including its React component props, Web Component attributes, configuration options, and supported layouts. Elements is a client-side component library and does not expose a traditional REST API. It is configured via React props on the API React component or HTML attributes on the elements-api custom element.
+  version: 8.0.0
+  contact:
+    name: Stoplight Support
+    url: https://stoplight.io/contact-us
+  license:
+    name: Apache 2.0
+    url: https://github.com/stoplightio/elements/blob/main/LICENSE
+servers:
+- url: https://stoplight.io
+  description: Stoplight Documentation and Marketing Site
+tags:
+- name: Integration
+  description: Integration and embedding guides for using Elements in React, Angular, and plain HTML via Web Components or CDN.
+paths:
+  /open-source/elements:
+    get:
+      operationId: getElementsOverview
+      summary: Get Stoplight Elements Overview
+      description: Returns the Stoplight Elements open-source landing page describing the component library, its features, supported standards, and links to getting started guides and documentation.
+      tags:
+      - Integration
+      responses:
+        '200':
+          description: Successful response returning the Elements overview page.
+          content:
+            text/html:
+              schema:
+                type: string
+  /docs/elements:
+    get:
+      operationId: getElementsDocumentation
+      summary: Stoplight Elements Get Elements Documentation
+      description: Returns the main Elements documentation landing page with links to getting started guides for React, Web Components, and Angular, as well as the full configuration options reference.
+      tags:
+      - Integration
+      responses:
+        '200':
+          description: Successful response returning the Elements documentation index.
+          content:
+            text/html:
+              schema:
+                type: string
+  /docs/elements/b074dc07b3bae-getting-started-with-elements-in-react:
+    get:
+      operationId: getReactGettingStarted
+      summary: Stoplight Elements Get React Integration Guide
+      description: Returns the getting started guide for integrating Stoplight Elements as React components. Covers installation of @stoplight/elements, importing the API component, providing an apiDescriptionUrl or apiDescriptionDocument prop, choosing a layout, and configuring the router prop.
+      tags:
+      - Integration
+      responses:
+        '200':
+          description: Successful response returning the React integration guide.
+          content:
+            text/html:
+              schema:
+                type: string
+  /docs/elements/19a7f9f0cbf23-getting-started-with-web-component:
+    get:
+      operationId: getWebComponentGettingStarted
+      summary: Stoplight Elements Get Web Component Integration Guide
+      description: Returns the getting started guide for embedding Stoplight Elements as a Web Component (Custom Element) via CDN or npm. Covers including the web-components bundle, using the elements-api custom element tag in HTML, and setting attributes for apiDescriptionUrl, router, and layout.
+      tags:
+      - Integration
+      responses:
+        '200':
+          description: Successful response returning the Web Component integration guide.
+          content:
+            text/html:
+              schema:
+                type: string
+  /docs/elements/507fb7fab9b7d-getting-started-with-elements-in-angular:
+    get:
+      operationId: getAngularGettingStarted
+      summary: Stoplight Elements Get Angular Integration Guide
+      description: Returns the getting started guide for integrating Stoplight Elements into an Angular application, covering the CUSTOM_ELEMENTS_SCHEMA import, component registration, and attribute binding.
+      tags:
+      - Integration
+      responses:
+        '200':
+          description: Successful response returning the Angular integration guide.
+          content:
+            text/html:
+              schema:
+                type: string
+externalDocs:
+  description: Stoplight Elements Documentation
+  url: https://docs.stoplight.io/docs/elements
