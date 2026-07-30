@@ -1,31 +1,44 @@
 aid: elements
 url: https://raw.githubusercontent.com/api-evangelist/elements/refs/heads/main/apis.yml
 apis:
-  - aid: elements:elements
-    name: Stoplight Elements
-    tags:
-      - API Documentation
-      - Documentation
-      - OpenAPI
-      - React
-      - Web Components
-    humanURL: https://stoplight.io/open-source/elements
-    properties:
-      - url: https://stoplight.io/open-source/elements
-        type: Website
-      - url: https://docs.stoplight.io/docs/elements
-        type: Documentation
-      - url: https://github.com/stoplightio/elements
-        type: GitHub
-      - url: openapi/elements-elements-openapi.yml
-        type: OpenAPI
-      - url: json-schema/elements-configuration-schema.json
-        type: JSONSchema
-    description: >-
-      Stoplight Elements is an open-source API documentation component library that renders OpenAPI 2.0, 3.0, and 3.1
-      specifications as beautiful, interactive developer documentation. It is available as React components and Web
-      Components, making it embeddable in any web application or static HTML page. Elements provides a sidebar layout, a
-      stacked layout, and a responsive layout.
+- aid: elements:elements-configuration-api
+  name: Stoplight Elements Configuration API
+  description: >-
+    Configuration props and attributes for the Stoplight Elements API component controlling layout, visibility,
+    Try It behavior, routing, and OpenAPI specification loading.
+  humanURL: https://stoplight.io/open-source/elements
+  tags:
+  - Configuration
+  properties:
+  - type: OpenAPI
+    url: openapi/elements-configuration-api-openapi.yml
+  - type: Website
+    url: https://stoplight.io/open-source/elements
+  - type: Documentation
+    url: https://docs.stoplight.io/docs/elements
+  - type: GitHub
+    url: https://github.com/stoplightio/elements
+  - type: JSONSchema
+    url: json-schema/elements-configuration-schema.json
+- aid: elements:elements-integration-api
+  name: Stoplight Elements Integration API
+  description: >-
+    Integration and embedding guides for using Elements in React, Angular, and plain HTML via Web Components
+    or CDN.
+  humanURL: https://stoplight.io/open-source/elements
+  tags:
+  - Integration
+  properties:
+  - type: OpenAPI
+    url: openapi/elements-integration-api-openapi.yml
+  - type: Website
+    url: https://stoplight.io/open-source/elements
+  - type: Documentation
+    url: https://docs.stoplight.io/docs/elements
+  - type: GitHub
+    url: https://github.com/stoplightio/elements
+  - type: JSONSchema
+    url: json-schema/elements-configuration-schema.json
 name: Stoplight Elements
 tags:
   - API Documentation
@@ -36,7 +49,19 @@ tags:
   - React
   - Web Components
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/elements.png
 access: 3rd-Party
 created: '2026-03-18'
 modified: '2026-05-19'
