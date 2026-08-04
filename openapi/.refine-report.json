@@ -1,0 +1,16 @@
+{
+  "provider": "elements",
+  "sources": [
+    "elements-configuration-api-openapi.yml",
+    "elements-integration-api-openapi.yml"
+  ],
+  "outputs": [
+    "elements-configuration-api-openapi.yml",
+    "elements-integration-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
