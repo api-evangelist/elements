@@ -1,0 +1,106 @@
+{
+  "item": [
+    {
+      "id": "366a4573-f506-4ea7-92a7-dd3edb838998",
+      "name": "Configuration",
+      "description": {
+        "content": "Configuration props and attributes for the Stoplight Elements API component controlling layout, visibility, Try It behavior, routing, and OpenAPI specification loading.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6d23d50d-8dcc-4058-a2ae-5b7a428b4eff",
+          "name": "Stoplight Elements Get Configuration Options Reference",
+          "request": {
+            "name": "Stoplight Elements Get Configuration Options Reference",
+            "description": {
+              "content": "Returns the complete reference page for all Stoplight Elements configuration props and Web Component attributes, including apiDescriptionUrl, apiDescriptionDocument, layout, router, basePath, hideTryIt, hideTryItPanel, hideSamples, hideSchemas, hideInternal, hideExport, hideServerInfo, hideSecurityInfo, tryItCredentialsPolicy, tryItCorsProxy, maxRefDepth, logo, and outerRouter.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "docs",
+                "elements",
+                "ZG9jOjMyNjU5MTM-elements-configuration-options"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/html"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3f1a01da-695c-437c-9e4a-a96adb8250b9",
+              "name": "Successful response returning the configuration options reference.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "docs",
+                    "elements",
+                    "ZG9jOjMyNjU5MTM-elements-configuration-options"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/html"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/html"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://stoplight.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "553497a3-285a-475b-88e4-6df6edadd0f6",
+    "name": "Stoplight Elements Configuration API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Stoplight Elements is an open-source API documentation component library that renders OpenAPI 2.0, 3.0, and 3.1 specifications as beautiful, interactive developer documentation. This OpenAPI specification represents the conceptual API surface of the Stoplight Elements component library, including its React component props, Web Component attributes, configuration options, and supported layouts. Elements is a client-side component library and does not expose a traditional REST API. It is configured via React props on the API React component or HTML attributes on the elements-api custom element.\n\nContact Support:\n Name: Stoplight Support",
+      "type": "text/plain"
+    }
+  }
+}

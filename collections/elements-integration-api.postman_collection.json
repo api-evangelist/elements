@@ -1,0 +1,398 @@
+{
+  "item": [
+    {
+      "id": "e9a10b1e-f883-4c69-ab82-9262ce4ca7c1",
+      "name": "Integration",
+      "description": {
+        "content": "Integration and embedding guides for using Elements in React, Angular, and plain HTML via Web Components or CDN.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fa3d3e5d-5615-4f77-8e19-28b67cb177ec",
+          "name": "Get Stoplight Elements Overview",
+          "request": {
+            "name": "Get Stoplight Elements Overview",
+            "description": {
+              "content": "Returns the Stoplight Elements open-source landing page describing the component library, its features, supported standards, and links to getting started guides and documentation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "open-source",
+                "elements"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/html"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "18f0b70e-67f2-4783-9061-37d831a4150a",
+              "name": "Successful response returning the Elements overview page.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "open-source",
+                    "elements"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/html"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/html"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "834ba4d3-1621-4ab4-a6e9-f88f1c64523d",
+          "name": "Stoplight Elements Get Elements Documentation",
+          "request": {
+            "name": "Stoplight Elements Get Elements Documentation",
+            "description": {
+              "content": "Returns the main Elements documentation landing page with links to getting started guides for React, Web Components, and Angular, as well as the full configuration options reference.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "docs",
+                "elements"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/html"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d6566f5d-d4bc-471d-86e1-81cf9ae7679b",
+              "name": "Successful response returning the Elements documentation index.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "docs",
+                    "elements"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/html"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/html"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b3a763e1-da87-4223-ba46-2577d47d16d1",
+          "name": "Stoplight Elements Get React Integration Guide",
+          "request": {
+            "name": "Stoplight Elements Get React Integration Guide",
+            "description": {
+              "content": "Returns the getting started guide for integrating Stoplight Elements as React components. Covers installation of @stoplight/elements, importing the API component, providing an apiDescriptionUrl or apiDescriptionDocument prop, choosing a layout, and configuring the router prop.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "docs",
+                "elements",
+                "b074dc07b3bae-getting-started-with-elements-in-react"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/html"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "84a07c50-785b-47a5-a067-7e022dd9087c",
+              "name": "Successful response returning the React integration guide.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "docs",
+                    "elements",
+                    "b074dc07b3bae-getting-started-with-elements-in-react"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/html"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/html"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e4d2e7c6-abc9-4196-a1d7-21683cc09de9",
+          "name": "Stoplight Elements Get Web Component Integration Guide",
+          "request": {
+            "name": "Stoplight Elements Get Web Component Integration Guide",
+            "description": {
+              "content": "Returns the getting started guide for embedding Stoplight Elements as a Web Component (Custom Element) via CDN or npm. Covers including the web-components bundle, using the elements-api custom element tag in HTML, and setting attributes for apiDescriptionUrl, router, and layout.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "docs",
+                "elements",
+                "19a7f9f0cbf23-getting-started-with-web-component"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/html"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3ab3eb49-e096-483d-8fe5-dc01aa87d718",
+              "name": "Successful response returning the Web Component integration guide.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "docs",
+                    "elements",
+                    "19a7f9f0cbf23-getting-started-with-web-component"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/html"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/html"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ce9b8278-6552-4119-a13d-eca08b2ff2a1",
+          "name": "Stoplight Elements Get Angular Integration Guide",
+          "request": {
+            "name": "Stoplight Elements Get Angular Integration Guide",
+            "description": {
+              "content": "Returns the getting started guide for integrating Stoplight Elements into an Angular application, covering the CUSTOM_ELEMENTS_SCHEMA import, component registration, and attribute binding.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "docs",
+                "elements",
+                "507fb7fab9b7d-getting-started-with-elements-in-angular"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/html"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fea0f26f-9593-4832-b839-4947cfd23f41",
+              "name": "Successful response returning the Angular integration guide.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "docs",
+                    "elements",
+                    "507fb7fab9b7d-getting-started-with-elements-in-angular"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/html"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/html"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://stoplight.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b2f79e88-b3d1-4062-a113-cc0cc6f5cae3",
+    "name": "Stoplight Elements Configuration Integration API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Stoplight Elements is an open-source API documentation component library that renders OpenAPI 2.0, 3.0, and 3.1 specifications as beautiful, interactive developer documentation. This OpenAPI specification represents the conceptual API surface of the Stoplight Elements component library, including its React component props, Web Component attributes, configuration options, and supported layouts. Elements is a client-side component library and does not expose a traditional REST API. It is configured via React props on the API React component or HTML attributes on the elements-api custom element.\n\nContact Support:\n Name: Stoplight Support",
+      "type": "text/plain"
+    }
+  }
+}

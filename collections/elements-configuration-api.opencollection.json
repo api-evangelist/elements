@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Stoplight Elements Configuration API",
+    "version": "8.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Configuration",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Stoplight Elements Get Configuration Options Reference",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://stoplight.io/docs/elements/ZG9jOjMyNjU5MTM-elements-configuration-options"
+          },
+          "docs": "Returns the complete reference page for all Stoplight Elements configuration props and Web Component attributes, including apiDescriptionUrl, apiDescriptionDocument, layout, router, basePath, hideTryIt, hideTryItPanel, hideSamples, hideSchemas, hideInternal, hideExport, hideServerInfo, hideSecurityInfo, tryItCredentialsPolicy, tryItCorsProxy, maxRefDepth, logo, and outerRouter."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
