@@ -1,7 +1,7 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Stoplight Elements Configuration API
-  description: Stoplight Elements is an open-source API documentation component library that renders OpenAPI 2.0, 3.0, and 3.1 specifications as beautiful, interactive developer documentation. This OpenAPI specification represents the conceptual API surface of the Stoplight Elements component library, including its React component props, Web Component attributes, configuration options, and supported layouts. Elements is a client-side component library and does not expose a traditional REST API. It is configured via React props on the API React component or HTML attributes on the elements-api custom element.
+  description: Stoplight Elements is an open-source API documentation component library that renders OpenAPI 2.0, 3.0, and 3.1 specifications as beautiful, interactive developer documentation.
   version: 8.0.0
   contact:
     name: Stoplight Support
