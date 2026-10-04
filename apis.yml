@@ -1,5 +1,8 @@
 aid: elements
 url: https://raw.githubusercontent.com/api-evangelist/elements/refs/heads/main/apis.yml
+x-docs-platform: stoplight
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-10-03
 apis:
 - aid: elements:elements-configuration-api
   name: Stoplight Elements Configuration API
